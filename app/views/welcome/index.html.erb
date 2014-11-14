@@ -1,9 +1,16 @@
-<h1>To Do List</h1>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<h1>To Do List</h1>
 
-    <% @items.each do |item| %>
-      	<h3><%= item.dueby.strftime('%B %d, %Y') %></h3>
-        <p><%= item.chore %></p>
-    <% end %>
+		    <% @items.each do |item| %>
+		      	<p><%= item.dueby.strftime('%B %d, %Y') %></p>
+		        <h3><%= item.chore %></h3>
+		        <div><%= link_to 'Done', item, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+		        <div class="underline"> </div>
+		    <% end %>
 
-<br>
+		<br>
 
+		<%= link_to 'New Item', new_item_path %>
+	</div>
+</div>
