@@ -11,6 +11,17 @@
 </head>
 <body>
 
+	<div class="navbar-right">
+    <% if user_signed_in? %>
+      You are logged in as <%= current_user.email %> | 
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      You are not logged in.
+      <%= link_to "Log in", user_session_path %> or
+      <%= link_to "Sign Up", new_user_registration_path %>
+    <% end %>
+  </div>
+
 <div class="container">
 <%= yield %>
 </div>

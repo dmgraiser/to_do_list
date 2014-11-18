@@ -3,13 +3,19 @@ class WelcomeController < ApplicationController
   	@items = Item.all.order(:dueby)
 
 			@date = []
-    	@date.push(:dueby)
-		  @date
+      @items.each do |item|
+        @date = @date.push(item.dueby)
+      end
+
+      @date = @date.uniq
 	    	
   	
-    # if item.dueby != ""
-    # 	@show_date = "#{@items.dueby}"
-    # end
+
 
   end
+
+  def show_users
+    @users = User.all
+  end
+
 end

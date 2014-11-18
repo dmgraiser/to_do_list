@@ -1,0 +1,68 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body{
+ 	background:url(<%= asset_path "background.jpg" %>) no-repeat;
+ 	background-size: cover;
+ }
+
+.cant-see-me{
+	visibility: hidden;
+}
+
+h1{
+	font-family: 'Alegreya', serif;	
+	font-size: 7em;
+	text-align: center;
+	color: #53524f;
+}
+
+p{
+	text-align: center;	
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+}
+
+h3{
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 3em;
+}
+
+.col-md-6{
+	background:rgba(93, 116, 128, 0.75);
+	-moz-box-shadow: -6px 17px 27px #252e33;
+	-webkit-box-shadow: -6px 17px 27px #252e33;
+	box-shadow: -6px 17px 27px #252e33;
+	text-align: center;
+}
+
+li{
+	list-style: none;
+}
+
+a, a:visited, a:active{
+	color: #fff;
+}
+
+a:hover{
+	text-decoration: line-through;
+	background: none;
+}
+
+.glyphicon:hover{
+	text-decoration: none;
+}
